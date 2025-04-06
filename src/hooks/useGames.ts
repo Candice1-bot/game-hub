@@ -3,9 +3,10 @@ import apiClient from "../services/api-client";
 import { CanceledError } from "axios";
 
 
- interface Game {
+export interface Game {
    id: number;
    name: string;
+   background_image: string;
  }
  
  interface FetchGamesResponse {
@@ -14,7 +15,7 @@ import { CanceledError } from "axios";
  }
  
  const useGames = () =>{
-    const constroller = new AbortController()
+  const constroller = new AbortController()
   const [error, setError] = useState("");
   const [games, setGames] = useState<Game[]>([]);
   useEffect(() => {
@@ -23,7 +24,8 @@ import { CanceledError } from "axios";
       .then((res) => setGames(res.data.results))
       .catch((err) => {
         if (err instanceof CanceledError) return;
-        setError(err.message)});
+        setError(err.message)
+    });
 
     return () => constroller.abort();
   }, []);
