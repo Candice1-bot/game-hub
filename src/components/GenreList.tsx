@@ -1,9 +1,7 @@
-import React from 'react'
 import useGenres from '../hooks/useGenres'
-import { list } from '@chakra-ui/react';
 
 const GenreList = () => {
-  const {genres} = useGenres();
+  const {data : genres} = useGenres();
   return (
 
     <ul>
