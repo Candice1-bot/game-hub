@@ -1,5 +1,3 @@
-Game-hub
-
 # Overview
 
 This is a responsive React app that fetches game data from the RAWG API and display the data in an organized way.
