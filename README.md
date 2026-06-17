@@ -1,15 +1,93 @@
+Game-hub
+
 # Overview
 
-Game Hub is a responsive React app that fetches game data from the RAWG API. Built with Chakra UI, it supports full-text search, genre/platform filtering, sort options, and dark/light theme switching. It uses a modular component architecture, reusable data-fetching hooks, and performance optimizations like static genre data.
+This is a responsive React app that fetches game data from the RAWG API and display the data in an organized way.
+
+## Tech Stack
+React
+Chakra UI
+TypeScript
+Axio
+Tanstack/react-query
+RAWG Video Games API 
+
+## Features
+- full-text search
+- genre/platform filtering
+- sort options
+- and dark/light theme switching.
+- modular component architecture,
+- reusable data-fetching hooks
+
+**Data Fetching & Caching**
+- by React Query
+
+**Frontend**
+React 
+React route
+axio
+
+## Project Structure
+
+```
+src
+├── assets                # resources 
+├── components/  # Reusable UI components
+├── data  # static data collected from api
+├── entities   # data models for extracting data from api
+├── hooks      # cutom hooks using react query
+├── pages      # Summary cards
+			├── ErrorPage      # error page
+			├── GameDetailPage  #subpage
+			├── HomePage # home page
+			├── Layout # root layout
+
+├──services #
+		├── api-client # fetch data from api	
+		├── image-url # utility function
+├── store # state management using zustand
+├── routes # react route file
+...
+
+```
 
 ## Getting Started
 
-To get started with GameHub, follow these steps:
+### 1. Clone the repository
 
-1. Clone this repository to your local machine.
-2. Run `npm install` to install the required dependencies.
-3. Get a RAWG API key at https://rawg.io/apidocs. You'll have to create an account first.
-4. Add the API key to **src/services/api-client.ts**
-5. Run `npm run dev` to start the web server.
+```bash
+git clone <repo-url>
+cd game-hub
+```
 
-## About the Course
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env` file based on `.env.example`:
+
+```
+RAWG_KEY=""
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Then open `http://localhost:3000`.
+
+
+## Possible Improvements
+
+- Add register part for user logging and access some priviledged contents.
+
+## License
+This project is for learning and portfolio use.
+
