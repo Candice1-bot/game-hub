@@ -1,6 +1,7 @@
 # Overview
 
 This is a responsive React app that fetches game data from the RAWG API and display the data in an organized way.
+It extended and updated Mosh Hamedani’s original tutorial.
 
 ## 1. Project Structure
 
